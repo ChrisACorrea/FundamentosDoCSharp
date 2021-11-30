@@ -37,17 +37,9 @@ static void Menu() {
 }
 
 static void Soma() {
-	Console.Clear();
+	double[] valoresRecebidos = ReceberValores();
 
-	Console.Write("Primeiro Valor: ");
-	double v1 = Double.Parse(Console.ReadLine());
-
-	Console.Write("Segundo Valor: ");
-	double v2 = Double.Parse(Console.ReadLine());
-
-	Console.WriteLine();
-
-	double soma = v1 + v2;
+	double soma = valoresRecebidos[0] + valoresRecebidos[1];
 
 	Console.WriteLine($"O resultado da soma é {soma}");
 	Console.ReadKey();
@@ -55,55 +47,31 @@ static void Soma() {
 }
 
 static void Subtracao() {
-	Console.Clear();
+	double[] valoresRecebidos = ReceberValores();
 
-	Console.Write("Primeiro Valor: ");
-	double v1 = Double.Parse(Console.ReadLine());
+	double subtracao = valoresRecebidos[0] - valoresRecebidos[1];
 
-	Console.Write("Segundo Valor: ");
-	double v2 = Double.Parse(Console.ReadLine());
-
-	Console.WriteLine();
-
-	double subtracao = v1 - v2;
-
-	Console.WriteLine($"O resultado da subtracao é {subtracao}");
+	Console.WriteLine($"O resultado da subtração é {subtracao}");
 	Console.ReadKey();
 	Menu();
 }
 
 static void Multiplicacao() {
-	Console.Clear();
+	double[] valoresRecebidos = ReceberValores();
 
-	Console.Write("Primeiro Valor: ");
-	double v1 = Double.Parse(Console.ReadLine());
+	double multiplicacao = valoresRecebidos[0] * valoresRecebidos[1];
 
-	Console.Write("Segundo Valor: ");
-	double v2 = Double.Parse(Console.ReadLine());
-
-	Console.WriteLine();
-
-	double multiplicacao = v1 * v2;
-
-	Console.WriteLine($"O resultado da multiplicacao é {multiplicacao}");
+	Console.WriteLine($"O resultado da multiplicação é {multiplicacao}");
 	Console.ReadKey();
 	Menu();
 }
 
 static void Divisao() {
-	Console.Clear();
+	double[] valoresRecebidos = ReceberValores();
 
-	Console.Write("Primeiro Valor: ");
-	double v1 = Double.Parse(Console.ReadLine());
+	double divisao = valoresRecebidos[0] / valoresRecebidos[1];
 
-	Console.Write("Segundo Valor: ");
-	double v2 = Double.Parse(Console.ReadLine());
-
-	Console.WriteLine();
-
-	double divisao = v1 / v2;
-
-	Console.WriteLine($"O resultado da divisao é {divisao}");
+	Console.WriteLine($"O resultado da divisão é {divisao}");
 	Console.ReadKey();
 	Menu();
 }
@@ -111,4 +79,20 @@ static void Divisao() {
 static void Sair() {
 	Console.WriteLine("Saindo...");
 	System.Environment.Exit(0);
+}
+
+static double[] ReceberValores() {
+	double[] valores = new double[2];
+	
+	Console.Clear();
+
+	Console.Write("Primeiro Valor: ");
+	valores[0] = Double.Parse(Console.ReadLine());
+
+	Console.Write("Segundo Valor: ");
+	valores[1] = Double.Parse(Console.ReadLine());
+
+	Console.WriteLine();
+
+	return valores;
 }
