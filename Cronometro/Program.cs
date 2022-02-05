@@ -26,11 +26,11 @@ static void Menu()
 static void PreInicio(int tempo)
 {
 	Console.Clear();
+	Console.WriteLine("Em suas marcas...");
+	Thread.Sleep(1000);
 	Console.WriteLine("Preparar...");
 	Thread.Sleep(1000);
-	Console.WriteLine("Apontar...");
-	Thread.Sleep(1000);
-	Console.WriteLine("Fogo...");
+	Console.WriteLine("Já!!!");
 	Thread.Sleep(1000);
 
 	Iniciar(tempo);
